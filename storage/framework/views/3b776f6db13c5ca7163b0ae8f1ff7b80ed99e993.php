@@ -28,14 +28,14 @@
           <label>
             <input type="radio" name="opsi" class="flat-red" value="name"> Berdasarkan Nama
           </label>
-          <select class="form-control select2" name="user" style="width: 100%;">
+          <select class="form-control select2" name="user" id="user" style="width: 100%;">
           </select>
         </div>
         <div class="form-group">
           <label>
             <input type="radio" name="opsi" class="flat-red" value="cabang"> Berdasarkan Kantor Cabang
           </label>
-          <select class="form-control select2 cabang" name="cabang" style="width: 100%;">
+          <select class="form-control select2 cabang" name="cabang" id="cabang" style="width: 100%;">
           </select>
         </div>
       </div>
@@ -81,10 +81,10 @@
         { id: <?php echo e($cabang->id); ?>, text: '<?php echo e($cabang->name); ?>'},
         <?php endforeach; ?>];
     //Initialize Select2 Elements
-    $(".select2").select2({
+    $("#user").select2({
       data: datauser
     });
-    $(".select2.cabang").select2({
+    $("#cabang").select2({
       data: datacabang
     });
 

@@ -87,6 +87,7 @@ Email : pusat@bmtalishlah.com Website : www.bmtalishlah.com";
       <th width="10%" scope="col">Jam Kembali</th>
       <th width="10%" scope="col">Keperluan</th>
       <th width="5%" scope="col">Jam Pulang</th>
+      <th width="5%" scope="col">Jam Kerja</th>
       
       
     </tr>
@@ -104,6 +105,7 @@ Email : pusat@bmtalishlah.com Website : www.bmtalishlah.com";
       <td align=center >{{$absen->in_ijin}} @if(is_null($absen->in_ijin)) <i><strong>-</strong></i> @endif</td>
       <td align=center >{{$absen->kt_ijin}} @if(is_null($absen->kt_ijin)) <i><strong>-</strong></i> @endif</td>
       <td align=center >{{$absen->jam_out}} @if(is_null($absen->jam_out)) <i><strong>Belum Absen</strong></i> @endif</td>
+      <td align=center>{{$absen->jam_kerja}}</td>
     </td>
   </tr>
     @endforeach

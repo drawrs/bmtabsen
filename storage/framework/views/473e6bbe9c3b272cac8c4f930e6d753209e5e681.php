@@ -20,7 +20,9 @@
         <link rel="stylesheet" href="<?php echo e(URL::to('admin/dist/css/skins/_all-skins.min.css')); ?>">
         <script src='https://code.jquery.com/jquery-3.0.0.min.js'></script>
         <?php echo $__env->yieldContent('script'); ?>
-        <link rel="stylesheet" href="../../plugins/iCheck/square/blue.css">
+        <!-- iCheck for checkboxes and radio inputs -->
+        <link rel="stylesheet" href="<?php echo e(URL::to('admin/plugins/iCheck/all.css')); ?>">
+        <link rel="stylesheet" href="<?php echo e(URL::to('admin/plugins/iCheck/square/blue.css')); ?>">
         
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -73,9 +75,9 @@
                         <!-- /.col -->
                     </div>
                 </form>
-                <!-- /.social-auth-links -->
+                <!-- /.social-auth-links
                 <a href="#">I forgot my password</a><br>
-                <a href="register.html" class="text-center">Register a new membership</a>
+                <a href="register.html" class="text-center">Register a new membership</a> -->
             </div>
             <!-- /.login-box-body -->
         </div>
@@ -85,15 +87,16 @@
         <script src="<?php echo e(URL::to('admin/bootstrap/js/bootstrap.min.js')); ?>"></script>
         <!-- SlimScroll -->
         <script src="<?php echo e(URL::to('admin/plugins/slimScroll/jquery.slimscroll.min.js')); ?>"></script>
+        <script src="<?php echo e(URL::to('admin/plugins/iCheck/icheck.min.js')); ?>"></script>
         <!-- AdminLTE App -->
         <script src="<?php echo e(URL::to('admin/dist/js/app.min.js')); ?>"></script>
         <script>
         $(function () {
         $('input').iCheck({
-        checkboxClass: 'icheckbox_square-blue',
-        radioClass: 'iradio_square-blue',
-        increaseArea: '20%' // optional
-        });
+            checkboxClass: 'icheckbox_square-blue',
+            radioClass: 'iradio_square-blue',
+            increaseArea: '20%' // optional
+            });
         });
         </script>
     </body>
